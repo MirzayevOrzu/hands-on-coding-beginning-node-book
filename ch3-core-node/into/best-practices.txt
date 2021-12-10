@@ -1,0 +1,9 @@
+Best Practices for working with Modules
+
+1. Do not use the .js extention to import modules (require('./foo') instead of require('./foo.js))
+2. When using file-based modules, use relative paths (require('./foo) instead of require('foo');
+3. Try and use the exports alias when you want to export more than one thing.
+    Create a Local Variable and Also Export
+    var foo = exports.foo = /* whatever you want to export as `foo` from this module */ ;
+4. Export an entire folder. If you have too many modules that go together that you keep
+    importing into other files, try to avoid repeating the import
